@@ -1,0 +1,19 @@
+airbot_error_manager:
+  ros__parameters:
+    log_print: true
+    # 0: unset, 10: debug, 20: info, 30: warn, 40: error
+    log_level: 20
+    publish_rate_ms: 1000
+    error_publish_cnt: 1 # 에러 발생/해제 메시지 퍼블리싱 횟수 (to UDP_interface)
+    error_list_size: 28 # 관리할 에러 리스크 최대 크기
+    error_list: error_list.yaml
+
+airbot_error_monitor:
+  ros__parameters:
+    publish_rate:
+      low_battery_rate_ms: 1000
+      fall_down_rate_ms: 1000
+      board_overheat_rate_ms: 1000
+      battery_discharge_rate_ms: 1000
+      charging_rate_ms: 1000
+      lift_error_rate_ms: 10
